@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-p: "Montserrat", sans-serif;
+  --font-a: "Tenor Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    @apply font-p bg-color-1 text-base w-full overflow-x-hidden
+  }
+}
