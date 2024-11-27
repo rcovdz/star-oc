@@ -4,16 +4,18 @@ import WhiteStar from "../assets/svg/WhiteStar";
 
 const Home = () => {
   return (
-    <section
-      id="home"
-      className="max-w-[91.75rem] mx-auto px-[1.25rem] pt-[5.39rem] xs:pt-[5.455rem] sm:pt-[5.453rem] md:pt-[5.781rem] md:px-10 lg:pt-[7.031rem] xl:pt-[7.531rem] xl:px-12"
-    >
-      <div className="main_wrapper flex flex-col gap-3">
-        <div className="bg-gradient-to-tl from-sky-600 to-color-3 px-[1rem] py-[2rem] rounded-[1.5rem] flex flex-col items-center justify-center gap-[1.5rem] sm:gap-[2rem] md:gap-[2.5rem]">
-          <h1 className="text-[1.92rem] text-color-1 text-center leading-[2.3rem] font-bold font-a sm:max-w-[34rem] sm:tracking-[0.1rem] md:text-[3rem] md:max-w-[40rem] md:leading-[3rem] md:tracking-[0.2rem] lg:text-[4rem] lg:leading-[4rem] lg:max-w-[50rem]">
+    <section id="home" className="main_container">
+      <div className="main_wrapper">
+        <div className="bg-gradient-to-t from-sky-600 to-color-3 px-[1rem] py-[2rem] rounded-[1.5rem] flex flex-col items-center justify-center gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem]">
+          <h1 className="text-[1.92rem] text-color-1 text-center leading-[2.3rem] font-bold font-a sm:max-w-[34rem] sm:tracking-[0.1rem] md:text-[3rem] md:max-w-[40rem] md:leading-[3rem] md:tracking-[0.2rem] lg:text-[3.5rem] lg:leading-[3.3rem] lg:max-w-[50rem] xl:text-[4rem] xl:leading-[4rem] xl:max-w-[67.6rem]">
             Calidad única en todos nuestros{" "}
-            <span className="italic text-color-2">suministros</span> y{" "}
-            <span className="italic text-color-2">servicios</span>
+            <span className="bg-gradient-to-br from-color-2 to-color-1 bg-clip-text text-transparent">
+              suministros
+            </span>{" "}
+            y{" "}
+            <span className="bg-gradient-to-br from-color-2 to-color-1 bg-clip-text text-transparent">
+              servicios
+            </span>
           </h1>
           <a
             href="#about"
@@ -32,7 +34,7 @@ const Home = () => {
                   className="shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] rounded-[1.5rem] bg-color-1 flex flex-col items-center justify-center p-3 gap-4 h-[13rem]"
                 >
                   {i.svg}
-                  <h2 className="text-center text-balance leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold xl:text-[1.24rem] xl:leading-[1.3rem]">
+                  <h2 className="text-center leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold lg:max-w-[16.5rem] xl:text-[1.24rem] xl:leading-[1.3rem] xl:text-balance xl:max-w-[20rem]">
                     {i.content}
                   </h2>
                   <a
@@ -54,7 +56,7 @@ const Home = () => {
                   className="shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] rounded-[1.5rem] bg-color-1 flex flex-col items-center justify-center p-3 gap-4 h-[13rem]"
                 >
                   {i.svg}
-                  <h2 className="text-center text-balance leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold xl:text-[1.24rem] xl:leading-[1.3rem]">
+                  <h2 className="text-center text-balance leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold lg:max-w-[16.5rem] xl:text-[1.24rem] xl:leading-[1.3rem] xl:max-w-[22.5rem]">
                     {i.content}
                   </h2>
                   <a
@@ -76,7 +78,7 @@ const Home = () => {
             </h2>
             <a
               href="#about"
-              className="bg-gradient-to-br from-sky-600 to-color-3 text-color-1 font-semibold p-2 text-[1.2rem] rounded-[0.5rem] md:text-[1.5rem] md:p-3"
+              className="bg-gradient-to-br from-sky-600 to-color-3 text-color-1 font-semibold p-2 text-[1.2rem] rounded-[0.5rem] md:text-[1.3rem] md:p-3"
             >
               Conócenos
             </a>
@@ -89,7 +91,7 @@ const Home = () => {
                 className="flex-1 flex items-center justify-center flex-col gap-[1rem] py-[1rem] rounded-[1.5rem] shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] bg-color-1"
               >
                 {i.svg}
-                <h2 className="text-color-3 text-center font-semibold leading-[1rem] max-w-[10rem] md:text-[1.5rem] md:max-w-[13rem] md:leading-[1.5rem]">
+                <h2 className="text-color-3 text-center font-semibold leading-[1rem] max-w-[10rem] md:text-[1.4rem] md:max-w-[13rem] md:leading-[1.4rem]">
                   {i.content}
                 </h2>
               </a>

@@ -23,7 +23,7 @@ export const heroImg = [
     width: 70,
     height: 41,
     alt: "wiese logo",
-    class: "md:w-[5rem] lg:w-[6rem]",
+    class: "md:w-[5rem] lg:w-[5.5rem] xl:w-[6rem]",
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ export const heroImg = [
     width: 70,
     height: 41,
     alt: "elite logo",
-    class: "md:w-[5rem] lg:w-[6rem]",
+    class: "md:w-[5rem] lg:w-[5.5rem] xl:w-[6rem]",
   },
   {
     id: "3",
@@ -39,7 +39,7 @@ export const heroImg = [
     width: 70,
     height: 32,
     alt: "purell logo",
-    class: "md:w-[5rem] lg:w-[6rem]",
+    class: "md:w-[5rem] lg:w-[5.5rem] xl:w-[6rem]",
   },
   {
     id: "4",
@@ -47,7 +47,7 @@ export const heroImg = [
     width: 70,
     height: 29,
     alt: "wiese logo",
-    class: "md:w-[5rem] lg:w-[6rem]",
+    class: "md:w-[5rem] lg:w-[5.5rem] xl:w-[6rem]",
   },
   {
     id: "5",
@@ -55,7 +55,7 @@ export const heroImg = [
     width: 70,
     height: 21,
     alt: "wiese logo",
-    class: "hidden lg:flex lg:w-[6rem]",
+    class: "hidden lg:flex lg:w-[5.5rem] xl:w-[6rem]",
   },
   {
     id: "6",
@@ -114,7 +114,7 @@ export const bottomHome = [
   },
 ];
 
-export const leftQuality = [
+export const topQuality = [
   {
     title: "Eficaz",
     content:
@@ -127,7 +127,7 @@ export const leftQuality = [
   },
 ];
 
-export const rightQuality = [
+export const bottomQuality = [
   {
     title: "Premium",
     content:

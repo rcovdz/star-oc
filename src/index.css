@@ -17,6 +17,10 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-pt-[6.81rem] xs:scroll-pt-[8rem]
+  }
+
   body {
     @apply font-p bg-color-1 text-base w-full overflow-x-hidden
   }
