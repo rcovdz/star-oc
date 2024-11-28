@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, easeIn, easeOut, motion } from "framer-motion";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { navigation } from "../Constants";
+import { navigation } from "../constants";
 import Logo from "../assets/svg/Logo";
 
 const Navbar = () => {
@@ -112,7 +112,7 @@ const Navbar = () => {
     <div className="w-full fixed top-0 bg-color-1">
       <div className="max-w-[91.75rem] mx-auto px-5 my-[1rem] h-full flex items-center justify-between md:px-10 xl:px-12">
         <div>
-          <a href="#home">
+          <a href="#home" aria-label="Link to homepage">
             <Logo />
           </a>
         </div>
@@ -122,6 +122,7 @@ const Navbar = () => {
               <a
                 className="text-color-3 font-bold text-[1.1rem] p-1 hover:bg-color-3 hover:rounded hover:text-color-1 lg:text-[1.20rem] xl:text-[1.25rem]"
                 href={link.to}
+                aria-label={`Link to ${link.title}`}
               >
                 {link.title}
               </a>
@@ -132,6 +133,8 @@ const Navbar = () => {
           <button
             className="w-10 flex flex-col justify-center items-end gap-[0.4rem] z-50 relative"
             onClick={toggleNavigation}
+            aria-expanded={open ? "true" : "false"}
+            aria-label="Toggle navigation menu"
           >
             <motion.div
               variants={topVariants}
@@ -164,6 +167,7 @@ const Navbar = () => {
                       className="hover:bg-color-3 hover:rounded hover:text-color-1 p-1"
                       href={link.to}
                       onClick={toggleNavigation}
+                      aria-label={`Link to ${link.title}`}
                     >
                       {link.title}
                     </a>

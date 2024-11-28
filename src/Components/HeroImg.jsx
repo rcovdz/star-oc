@@ -1,4 +1,4 @@
-import { heroImg } from "../Constants";
+import { heroImg } from "../constants";
 
 const HeroImg = () => {
   return (
@@ -10,8 +10,6 @@ const HeroImg = () => {
         <img
           key={i.id}
           src={i.src}
-          width={i.width}
-          height={i.height}
           alt={i.alt}
           className={i.class}
         />

@@ -1,5 +1,5 @@
-import { bottomHome, leftHome, rightHome } from "../Constants";
-import HeroImg from "./HeroImg";
+import { bottomHome, leftHome, rightHome } from "../constants";
+import HeroImg from "../components/HeroImg";
 import WhiteStar from "../assets/svg/WhiteStar";
 
 const Home = () => {

@@ -1,7 +1,6 @@
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-import Quality from "./Components/Quality";
-import About from "./Components/About";
+import Home from "./screens/Home";
+import Navbar from "./components/Navbar";
+import Quality from "./components/Quality";
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
       <Navbar />
       <Home />
       <Quality />
-      <About />
     </main>
   );
 }

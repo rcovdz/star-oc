@@ -1,6 +1,6 @@
 import Check from "../assets/svg/Check";
 import OfficeClean from "../assets/svg/OfficeClean";
-import { topQuality, bottomQuality } from "../Constants";
+import { topQuality, bottomQuality } from "../constants";
 
 const Quality = () => {
   return (
@@ -25,9 +25,9 @@ const Quality = () => {
                 >
                   <div className="flex items-center gap-2">
                     <Check />
-                    <h6 className="font-bold text-color-1 xs:text-[1.1rem] sm:text-[1.2rem]">
+                    <h4 className="font-bold text-color-1 xs:text-[1.1rem] sm:text-[1.2rem]">
                       {i.title}
-                    </h6>
+                    </h4>
                   </div>
                   <p className="text-color-1 font-medium sm:text-[1.010rem]">
                     {i.content}
@@ -43,9 +43,9 @@ const Quality = () => {
                 >
                   <div className="flex items-center gap-2">
                     <Check />
-                    <h6 className="font-bold text-color-1 xs:text-[1.1rem] sm:text-[1.2rem]">
+                    <h4 className="font-bold text-color-1 xs:text-[1.1rem] sm:text-[1.2rem]">
                       {i.title}
-                    </h6>
+                    </h4>
                   </div>
                   <p className="text-color-1 font-medium sm:text-[1.010rem]">
                     {i.content}
