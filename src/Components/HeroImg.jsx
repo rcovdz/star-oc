@@ -11,6 +11,8 @@ const HeroImg = () => {
           key={i.id}
           src={i.src}
           alt={i.alt}
+          width={i.width}
+          height={i.height}
           className={i.class}
         />
       ))}
