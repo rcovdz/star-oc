@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { AnimatePresence, easeIn, easeOut, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { navigation } from "../constants";
 import Logo from "../assets/svg/Logo";
+import HamburgerLink from "./HamburgerLink";
+import HamburgerButton from "./HamburgerButton";
+import MenuLink from "./MenuLink";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -17,72 +20,11 @@ const Navbar = () => {
     }
   };
 
-  const topVariants = {
-    closed: {
-      x: 0,
-      opacity: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    opened: {
-      x: 0,
-      y: -1,
-      opacity: 1,
-      rotate: 45,
-      transition: {
-        delay: 0,
-        duration: 0.2,
-      },
-    },
-  };
-
-  const centerVariants = {
-    closed: {
-      x: 0,
-      opacity: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    opened: {
-      opacity: 0,
-      x: 0,
-      transition: {
-        delay: 0,
-        duration: 0,
-      },
-    },
-  };
-
-  const bottomVariants = {
-    closed: {
-      x: 0,
-      opacity: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    opened: {
-      x: 0,
-      y: 1,
-      opacity: 1,
-      rotate: -45,
-      transition: {
-        delay: 0,
-        duration: 0.2,
-      },
-    },
-  };
-
   const listVariants = {
     closed: {
       x: "100dvw",
       transition: {
-        ease: easeOut,
+        ease: "easeOut",
         duration: 0.3,
       },
     },
@@ -92,7 +34,7 @@ const Navbar = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.1,
-        ease: easeIn,
+        ease: "easeIn",
       },
     },
   };
@@ -119,39 +61,12 @@ const Navbar = () => {
         <nav className="hidden md:flex md:justify-end md:gap-5 lg:gap-7 xl:gap-8">
           {navigation.map((link) => (
             <div key={link.title}>
-              <a
-                className="text-color-3 font-bold text-[1.1rem] p-1 hover:bg-color-3 hover:rounded hover:text-color-1 lg:text-[1.20rem] xl:text-[1.25rem]"
-                href={link.to}
-                aria-label={`Link to ${link.title}`}
-              >
-                {link.title}
-              </a>
+              <MenuLink link={link} />
             </div>
           ))}
         </nav>
         <div className="md:hidden">
-          <button
-            className="w-10 flex flex-col justify-center items-end gap-[0.4rem] z-50 relative"
-            onClick={toggleNavigation}
-            aria-expanded={open ? "true" : "false"}
-            aria-label="Toggle navigation menu"
-          >
-            <motion.div
-              variants={topVariants}
-              animate={open ? "opened" : "closed"}
-              className="w-8 h-1 bg-color-3 rounded origin-left"
-            ></motion.div>
-            <motion.div
-              variants={centerVariants}
-              animate={open ? "opened" : "closed"}
-              className="w-10 h-1 bg-color-3 rounded"
-            ></motion.div>
-            <motion.div
-              variants={bottomVariants}
-              animate={open ? "opened" : "closed"}
-              className="w-8 h-1 bg-color-3 rounded origin-left"
-            ></motion.div>
-          </button>
+          <HamburgerButton toggleNavigation={toggleNavigation} open={open} />
           <AnimatePresence>
             {open && (
               <motion.nav
@@ -163,14 +78,10 @@ const Navbar = () => {
               >
                 {navigation.map((link) => (
                   <motion.div variants={listItemVariants} key={link.title}>
-                    <a
-                      className="hover:bg-color-3 hover:rounded hover:text-color-1 p-1"
-                      href={link.to}
-                      onClick={toggleNavigation}
-                      aria-label={`Link to ${link.title}`}
-                    >
-                      {link.title}
-                    </a>
+                    <HamburgerLink
+                      link={link}
+                      toggleNavigation={toggleNavigation}
+                    />
                   </motion.div>
                 ))}
               </motion.nav>

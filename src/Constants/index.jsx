@@ -23,7 +23,7 @@ export const heroImg = [
     width: 160,
     height: 98,
     alt: "wiese logo",
-    class: "w-[5rem] h-[3rem]",
+    class: "aspect-square w-[4rem] h-[2.4rem] md:w-[5.2rem] md:h-[3.4rem]",
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ export const heroImg = [
     width: 161,
     height: 95,
     alt: "elite logo",
-    class: "w-[5rem] h-[3rem]",
+    class: "aspect-square w-[4rem] h-[2.5rem] md:w-[5.2rem] md:h-[3.5rem]",
   },
   {
     id: "3",
@@ -39,15 +39,15 @@ export const heroImg = [
     width: 208,
     height: 98,
     alt: "purell logo",
-    class: "w-[5rem] h-[2rem]",
+    class: "aspect-square w-[4rem] h-[2.05rem] md:w-[6.25rem] md:h-[3.5rem]",
   },
   {
     id: "4",
     src: kimberly,
     width: 240,
     height: 89,
-    alt: "wiese logo",
-    class: "w-[6rem] h-[2rem]",
+    alt: "kimberly-clark logo",
+    class: "aspect-square w-[4.5rem] h-[2.2rem] md:w-[6.25rem] md:h-[3.5rem]",
   },
   {
     id: "5",
@@ -55,7 +55,7 @@ export const heroImg = [
     width: 420,
     height: 125,
     alt: "wiese logo",
-    class: "w-[4rem] h-[3rem] hidden lg:flex",
+    class: "aspect-square hidden lg:flex w-[6.5rem] h-[3rem]  ",
   },
   {
     id: "6",
@@ -63,7 +63,7 @@ export const heroImg = [
     width: 228,
     height: 111,
     alt: "oval logo",
-    class: "w-[4rem] h-[3rem] hidden xl:flex",
+    class: "aspect-square hidden xl:flex w-[6rem] h-[3rem]  ",
   },
 ];
 

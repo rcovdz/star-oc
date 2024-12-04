@@ -28,20 +28,20 @@ const Home = () => {
         <div className="hidden lg:flex lg:gap-3">
           <div className="w-full flex gap-3">
             <div className="flex-1 flex flex-col gap-3">
-              {leftHome.map((i) => (
+              {leftHome.map((item) => (
                 <div
-                  key={i.button}
+                  key={item.button}
                   className="shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] rounded-[1.5rem] bg-color-1 flex flex-col items-center justify-center p-3 gap-4 h-[13rem]"
                 >
-                  {i.svg}
+                  {item.svg}
                   <h2 className="text-center leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold lg:max-w-[16.5rem] xl:text-[1.24rem] xl:leading-[1.3rem] xl:text-balance xl:max-w-[20rem]">
-                    {i.content}
+                    {item.content}
                   </h2>
                   <a
-                    href={i.to}
+                    href={item.to}
                     className="bg-gradient-to-br from-sky-600 to-color-3 text-color-1 font-semibold p-2 text-[1.2rem] rounded-[0.5rem]"
                   >
-                    {i.button}
+                    {item.button}
                   </a>
                 </div>
               ))}
@@ -50,21 +50,21 @@ const Home = () => {
               <WhiteStar />
             </div>
             <div className="flex-1 flex flex-col gap-3">
-              {rightHome.map((i) => (
+              {rightHome.map((item) => (
                 <div
-                  key={i.button}
+                  key={item.button}
                   className="shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] rounded-[1.5rem] bg-color-1 flex flex-col items-center justify-center p-3 gap-4 h-[13rem]"
                 >
-                  {i.svg}
+                  {item.svg}
                   <h2 className="text-center text-balance leading-[1.3rem] text-[1.2rem] text-color-3 font-semibold lg:max-w-[16.5rem] xl:text-[1.24rem] xl:leading-[1.3rem] xl:max-w-[22.5rem]">
-                    {i.content}
+                    {item.content}
                   </h2>
                   <a
-                    target={i.target}
-                    href={i.to}
+                    target={item.target}
+                    href={item.to}
                     className="bg-gradient-to-br from-sky-600 to-color-3 text-color-1 font-semibold p-2 text-[1.2rem] rounded-[0.5rem]"
                   >
-                    {i.button}
+                    {item.button}
                   </a>
                 </div>
               ))}
@@ -84,15 +84,15 @@ const Home = () => {
             </a>
           </div>
           <div className="flex gap-3">
-            {bottomHome.map((i) => (
+            {bottomHome.map((item) => (
               <a
-                key={i.id}
-                href={i.to}
+                key={item.id}
+                href={item.to}
                 className="flex-1 flex items-center justify-center flex-col gap-[1rem] py-[1rem] rounded-[1.5rem] shadow-[0px_0px_21px_8px_rgba(0,_0,_0,_0.2)] bg-color-1"
               >
-                {i.svg}
+                {item.svg}
                 <h2 className="text-color-3 text-center font-semibold leading-[1rem] max-w-[10rem] md:text-[1.4rem] md:max-w-[13rem] md:leading-[1.4rem]">
-                  {i.content}
+                  {item.content}
                 </h2>
               </a>
             ))}

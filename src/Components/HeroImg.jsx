@@ -1,3 +1,4 @@
+import { picture } from "framer-motion/client";
 import { heroImg } from "../constants";
 
 const HeroImg = () => {
@@ -7,14 +8,15 @@ const HeroImg = () => {
         Trabajamos <br /> con:
       </span>
       {heroImg.map((i) => (
-        <img
-          key={i.id}
-          src={i.src}
-          alt={i.alt}
-          width={i.width}
-          height={i.height}
-          className={i.class}
-        />
+        <picture key={i.id}>
+          <img
+            src={i.src}
+            alt={i.alt}
+            width={i.width}
+            height={i.height}
+            className={i.class}
+          />
+        </picture>
       ))}
     </div>
   );
